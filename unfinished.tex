@@ -1,0 +1,185 @@
+\documentclass[english]{article}
+	\usepackage[latin9]{inputenc}
+	\usepackage{geometry}
+	\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
+	\setlength{\parindent}{0bp}
+	\usepackage{mathrsfs}
+	\usepackage{amsmath}
+	\usepackage{setspace}
+	\usepackage{esint}
+	\usepackage{marginnote}
+	\usepackage{hyperref}
+	\usepackage{mathpazo} % font %
+	\usepackage{eulervm} % font %
+	\usepackage{MnSymbol}
+	\usepackage{xcolor}
+	\usepackage{outlines}
+	\usepackage{graphicx}
+	\usepackage{mathtools}
+	\def\d{\text{d}}
+	\def\lap{\Delta}
+	\def\id{\text{id}}
+	\def\hlf{\frac{1}{2}}
+	\newcommand\norm[1]{\left\Vert {#1}\right\Vert }
+	\renewcommand\to{\longrightarrow}
+	\def\eps{\varepsilon}
+	\def\sub{\subseteq}
+	\def\subn{\subset}
+	\def\C{\mathbf{C}}
+	\def\Z{\mathbf{Z}}
+	\def\F{\mathbf{F}}
+	\def\R{\mathbf{R}}
+	\def\disp{\displaystyle}
+	\newcommand\floor[1]{\lfloor{#1}\rfloor}
+	\graphicspath{ {./imgs/} }
+	\newcommand\cyan[1]{{\color{blue}{#1}}}
+	\newcommand\orange[1]{{\color{orange}{#1}}}
+	\newcommand\red[1]{{\color{red}{#1}}}
+	\newcommand\task{\red{Task. }}
+	\newcommand{\qed}{$\hfill\blacksquare$}
+	\newcommand{\SubItem}[1]{
+    	{\setlength\itemindent{15pt} \item[-] #1 }}
+	\newcommand\syl[1]{$\text{Sylow}_{#1}$}
+	\def\ord{\text{ord}}
+	\def\lcm{\text{lcm}}
+	\def\perm{\text{Perm}}
+	\def\cay{\text{Cay}}
+	\def\fgrp{\text{Grp}_{\text{f}}}
+	\def\sgn{\text{sgn}}
+	\newcommand\set[1]{\{#1\}}
+	\def\img{\text{img}}
+\begin{document}
+Understand. The following are equivalent for a finite group $G$.
+\begin{itemize}
+\item The composition $G\xrightarrow{\cay}\perm(G)\xrightarrow{\sgn}\{\pm1\}$ is non-trivial.
+\item $2\mid \ord(G)$ and $G$ has an element of order $2^{\nu_2(\ord(G))}$.
+\item $2\mid \ord(G)$ and $G$'s \syl{2} subgroups are cyclic.
+\\
+\end{itemize} 
+Corollary. Let $G$ be a finite group. Then the set elements of odd order $O$ forms a subgroup, under the assumption that $G$ has an element of order $2^{\nu_2(\ord(G))}$. Moreover, $[G:O]=2^{\nu_2(\ord(G))}$.
+\\\\
+Proof. Write $\ord(G)=2^k(2\ell-1)$. The case $k=0$ is trivial. If $k\ge1$, then the composition $G\to\perm(G)\to\set{\pm1}$ is non-trivial. Thus $G$ has a normal subgroup $N$ of index $2$. We have $\ord(N)=2^{k-1}(2\ell-1)$, $O_G=O_N$, and $N$ has an element of order $2^{k-1}$. q.e.d.
+\\\\
+Understand. Let $M$ be a semi-group of $n$ elements. Then $m^{\lcm(1,\dots,n)}=m^{2\lcm(1,\dots,n)}$ for all $m\in M$.
+\\\\
+Corollary. Let $A\in\Z^{n\times n}$ be a $k$-th power of an integral matrix for all $k\ge 2$. Then $A=A^2=A^3=\dots$
+\\\\
+Proof. It suffices to show $A=A^2$ when reduced mod $p$ for each prime $p$. However, working in $M=\F_p^{n\times n}$ we have $\bar{A}={X}^{\lcm(1,\dots,p^{n^2})}$ which implies $\bar{A}=\bar{A}^2$.
+\\\\
+Understand. For a linear mapping $T:V\to W$ of vector spaces over a finite field we have $\#\{v\in V: Tv\in S\}=\#\{\img T\cap S\}\cdot \#\ker T$.
+\\\\
+Exercise. Given a random coloring of the $30$ edges of the icosahedron red green and blue, what is the probability that each of the $20$ triangular faces have two edges of one color and one edge of another color?
+\\\\
+
+
+A bashing proof of theorema egregium. Let $X=X(u,v):D\sub\R^2\overset{\sim}{\to}S\subn \R^3$ be a surface parametrization. Let $$N=\dfrac{X_u\times X_v}{\norm{X_u\times X_v}}$$ be the normal, and
+$$\left(\begin{array}{cc}
+E & F\\
+F & G
+\end{array}\right)=\left(\begin{array}{cc}
+X_{u}\cdot X_{u} & X_{u}\cdot X_{v}\\
+X_{u}\cdot X_{v} & X_{v}\cdot X_{v}
+\end{array}\right)$$ be the first fundamental form, namely the surface isometry invariant. To compute the partials of the first fundamental form entries we write
+$$\begin{array}{ccc}
+X_{uu} =\alpha X_{u} + \beta X_{v} + eN\\\\
+X_{uv} = \eps X_{u} + \zeta X_{v} + fN\\\\
+X_{vv} = \gamma X_{u} + \delta X_{v} + gN
+\end{array}$$\\
+Then we have
+%$$
+%\begin{array}{ccccc}
+%X_{uu} & = & \alpha X_{u} + & \beta X_{v} + & eN\\
+%X_{vv} & = & \gamma X_{u} + & \delta X_{v} + & gN\\
+%X_{uv} & = & \eps X_{u} + & \zeta X_{v} + & fN
+%\end{array}
+%$$
+%\\
+$$
+\begin{array}{c}
+E_{u} = 2(\alpha E+\beta F)\\\\
+E_{v} = 2(\eps E+\zeta F)\\\\
+G_{u} = 2(\eps F+\zeta G)\\\\
+G_{v}  =  2(\gamma F+\delta G)\\\\
+F_u=\alpha F + \beta G + \eps E  + \zeta F\\\\
+F_v = \gamma E + \delta F + \eps F + \zeta G\\
+\end{array}
+$$\\
+Which mean
+$$\begin{array}{c}
+\left(\begin{array}{cc}
+E & F\\
+F & G
+\end{array}\right)\left(\begin{array}{c}
+\eps\\
+\zeta
+\end{array}\right)=\hlf\left(\begin{array}{c}
+E_{v}\\
+G_{u}
+\end{array}\right)\\\\
+\left(\begin{array}{cc}
+E & F\\
+F & G
+\end{array}\right)\left(\begin{array}{c}
+\alpha\\
+\beta
+\end{array}\right)=\hlf\left(\begin{array}{c}
+E_{u}\\
+2F_{u}-E_{v}
+\end{array}\right)\\\\
+\left(\begin{array}{cc}
+E & F\\
+F & G
+\end{array}\right)\left(\begin{array}{c}
+\gamma\\
+\delta
+\end{array}\right)=\hlf\left(\begin{array}{c}
+2F_{v}-G_{u}\\
+G_{v}
+\end{array}\right)
+\end{array}$$\\
+And so the first fundamental form determines $\alpha,\beta,\gamma,\delta,\eps,\zeta$. Gauss's theorem, which we shall now prove, is that $eg-f^2$ is also determined by the first fundamental form. Firstly, since $N\perp X_u$ and $N\perp X_v$ we have 
+$$\begin{array}{c}
+e=X_{uu}\cdot N=-N_{u}\cdot X_{u}\\
+f=X_{uv}\cdot N=-N_{v}\cdot X_{u}=-N_{u}\cdot X_{v}\\
+g=X_{vv}\cdot N=-N_{v}\cdot X_{v}
+\end{array}$$
+Moreover, since $\norm{N}\equiv 1$ we may write 
+$$\begin{array}{c}
+N_{u}=a^{11}X_{u}+a^{12}X_{v}\\
+N_{v}=a^{21}X_{u}+a^{22}X_{v}
+\end{array}$$\\
+which yields
+$$\left(\begin{array}{cc}
+a^{11} & a^{12}\\
+a^{21} & a^{22}
+\end{array}\right)\left(\begin{array}{cc}
+E & F\\
+F & G
+\end{array}\right)=-\left(\begin{array}{cc}
+e & f\\
+f & g
+\end{array}\right)$$\\
+We write $K=a^{11}a^{22}-a^{12}a^{21}=\dfrac{eg-f^2}{EG-F^2}$ for the Gaussian curvature. Now, we have
+$$\begin{array}{c}
+X_{uuv}=\alpha_{v}X_{u}+\alpha X_{uv}+\beta_{v}X_{v}+\beta X_{vv}+e_{v}N+eN_{v}\\
+X_{uvu}=\eps_{u}X_{u}+\eps X_{uu}+\zeta_{u}X_{v}+\zeta X_{uv}+f_{u}N+fN_{u}
+\end{array}$$
+Comparing the $X_v$ part we get 
+$$\alpha\zeta+\beta_{v}+\beta\delta+ea^{22}=\eps\beta+\zeta_{u}+\zeta^{2}+fa^{12}$$
+Now, by the matrix equation we have that
+$$\eps\beta+\zeta_{u}+\zeta^{2}-\alpha\zeta-\beta_{v}-\beta\delta=ea^{22}-fa^{12}=-EK$$
+is determined by the first fundamental form. Since $E$ is positive, $K$ is determined by the first fundamental form.\\
+Gauss's theorem, for example, implies that no part of a sphere can be isometrically embedded in the plane. Any map of the globe, no matter of how small a region, will have distorsions.
+\\\\
+In orthogonal coordinates $E=A^2,F=0,G=B^2$ we get $$K=-\dfrac{1}{AB}\left(\partial_{v}\left(\dfrac{A_{v}}{B}\right)+\partial_{u}\left(\dfrac{B_{u}}{A}\right)\right)$$
+In particular, 
+in isothermal coordinates $E=G=\lambda$, $F=0$ we have $$K=-\dfrac{\lap \log \lambda}{2\lambda}$$.
+\\\\
+To me, this finally gives a definition of the curvature of the hyperbolic plane and shows it is $-1$. Indeed, the hyperbolic plane is nothing but $H=\{y>0\}$ with the metric given by $\dfrac{\sqrt{\d x^2+\d y^2}}{y}$. Namely, the first fundamental form is $y^{-2}\id$. This immediately yields $K=-1$.
+\\\\
+Theorem. $\nu_p(n!)=\floor{n/p}+\floor{n/p^2}+\floor{n/p^3}+\dots$
+\\\\
+Theorem. $(p-1)\nu_p(n!)=n-s_p(n)$ where $s_p(n)$ is the digit sum of $n$ in base $p$.
+\\\\
+Theorem. $\nu_p{p^k\choose r}=k-\nu_p(r)$
+\end{document}
