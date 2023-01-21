@@ -48,8 +48,62 @@
 	\def\sgn{\text{sgn}}
 	\newcommand\set[1]{\{#1\}}
 	\def\img{\text{img}}
+	\newcommand\abs[1]{\left|#1\right|}
+	\DeclareMathOperator\End{End}
 \begin{document}
-Understand. The following are equivalent for a finite group $G$.
+\section*{combinatorics in finite vector spaces}
+In this chapter $F$ is a finite field with $q$ elements and all vector spaces are over $F$ and finite dimensional.\\
+
+
+Result. $\abs{V}=q^{\dim V}$.\\
+
+
+Result. Given a linear surjective mapping $T:V\to W$, $T$ is $\abs{\ker T}:1$.\\
+
+
+Exercise. Given a random coloring of the $30$ edges of the icosahedron red green and blue, what is the probability that each of the $20$ triangular faces have two edges of one color and one edge of another color?\\
+
+
+Result. The number of bases of $V$ is $b_d=(q^d-1)(q^d-q)\dots (q^d-q^{d-1})$, where $d=\dim V$.\\
+
+
+Result. The number of subspaces of $V$ of dimension $k$ is $\dfrac{(q^d-1)(q^d-q)\dots (q^d-q^{k-1})}{(q^k-1)(q^k-q)\dots (q^k-q^{k-1})}=\small{\left[\begin{array}{c}
+d\\
+k
+\end{array}\right]}_{q}$.\\
+
+
+Result. The number of pairs $(U,W)$ with $U\oplus W=V$ and $\dim U=k$ is $\dfrac{b_d}{b_k b_{d-k}}$.\\
+
+
+Result. The number of $T\in\End V$ such that $\ker T\oplus \img T =V$ and $\dim\ker T=k$ is $\dfrac{b_d}{b_k}$.\\
+
+
+Result. Given $U\le V$ of dimension $r$, the number of pairs $(W_1,W_2)$ with $W_1\plus W_2=V$, $W_1\cap W_2=U$ and $\dim W_1=r+j$ is $\dfrac{b_{d-r}}{b_j, b_{d-r-j}}$.\\
+
+
+Result. The number of $T\in\End V$ such that $\dim (\ker T\cap \img T)=r$ and $\dim \img T=r+j$ is $\left[\begin{array}{c}
+d\\
+d-r
+\end{array}\right]_{q}\left[\begin{array}{c}
+d-r\\
+r
+\end{array}\right]_{q}\dfrac{b_{d-2r}b_{j+r}}{b_{j}b_{d-2r-j}}$.\\
+
+
+Result. $q^{d^2}=\disp \sum_{r=0}^{\floor{d/2}}\sum_{j=0}^{d-2r}\left[\begin{array}{c}
+d\\
+d-r
+\end{array}\right]_{q}\left[\begin{array}{c}
+d-r\\
+r
+\end{array}\right]_{q}\dfrac{b_{d-2r}b_{j+r}}{b_{j}b_{d-2r-j}}$
+
+
+\section*{random abstract algebra bits}
+
+
+Observation. The following are equivalent for a finite group $G$.
 \begin{itemize}
 \item The composition $G\xrightarrow{\cay}\perm(G)\xrightarrow{\sgn}\{\pm1\}$ is non-trivial.
 \item $2\mid \ord(G)$ and $G$ has an element of order $2^{\nu_2(\ord(G))}$.
@@ -60,16 +114,13 @@ Corollary. Let $G$ be a finite group. Then the set elements of odd order $O$ for
 \\\\
 Proof. Write $\ord(G)=2^k(2\ell-1)$. The case $k=0$ is trivial. If $k\ge1$, then the composition $G\to\perm(G)\to\set{\pm1}$ is non-trivial. Thus $G$ has a normal subgroup $N$ of index $2$. We have $\ord(N)=2^{k-1}(2\ell-1)$, $O_G=O_N$, and $N$ has an element of order $2^{k-1}$. q.e.d.
 \\\\
-Understand. Let $M$ be a semi-group of $n$ elements. Then $m^{\lcm(1,\dots,n)}=m^{2\lcm(1,\dots,n)}$ for all $m\in M$.
+Observation. Let $M$ be a semi-group of $n$ elements. Then $m^{\lcm(1,\dots,n)}=m^{2\lcm(1,\dots,n)}$ for all $m\in M$.
 \\\\
 Corollary. Let $A\in\Z^{n\times n}$ be a $k$-th power of an integral matrix for all $k\ge 2$. Then $A=A^2=A^3=\dots$
 \\\\
 Proof. It suffices to show $A=A^2$ when reduced mod $p$ for each prime $p$. However, working in $M=\F_p^{n\times n}$ we have $\bar{A}={X}^{\lcm(1,\dots,p^{n^2})}$ which implies $\bar{A}=\bar{A}^2$.
 \\\\
-Understand. For a linear mapping $T:V\to W$ of vector spaces over a finite field we have $\#\{v\in V: Tv\in S\}=\#\{\img T\cap S\}\cdot \#\ker T$.
-\\\\
-Exercise. Given a random coloring of the $30$ edges of the icosahedron red green and blue, what is the probability that each of the $20$ triangular faces have two edges of one color and one edge of another color?
-\\\\
+
 
 
 A bashing proof of theorema egregium. Let $X=X(u,v):D\sub\R^2\overset{\sim}{\to}S\subn \R^3$ be a surface parametrization. Let $$N=\dfrac{X_u\times X_v}{\norm{X_u\times X_v}}$$ be the normal, and
