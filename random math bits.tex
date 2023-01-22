@@ -50,36 +50,56 @@
 	\def\img{\text{img}}
 	\newcommand\abs[1]{\left|#1\right|}
 	\DeclareMathOperator\End{End}
+	\DeclareMathOperator\Lin{Lin}
+	\DeclareMathOperator\GL{GL}
 \begin{document}
+\section*{misc}
+Definition. A (mathematical) juggling pattern is a permutation $f:\Z\to\Z$ for which $\d f(t)=f(t)-t\ge 0$.\\
+
+
+We think of $t\in \Z$ as a discrete, infinite in both directions time parameter. If there is no "throw" at time $t$, we set $f(t)=t$, and otherwise we set $f(t)$ to be the next time the "ball" thrown at $t$ will be thrown again. We think of $\d f(t)$ as the "height" of the throw. This model assumes only one ball may be thrown at once.\\
+
+
+Observation. Each orbit is either a fixed point (no throw) or infinite in both directions.\\
+
+
+The "balls" are in one to one correspondence with the infinite orbits.\\
+
+
+Observation. If $\d f$ is bounded by $M$ then so is the number of balls.\\
+
+
+What does $\sum_{t\in I}\d f(t)$ count for an interval $I$? well, it counts the "skips" of one ball over another. Approximately, if $I$ is very large, this equals $\abs{I}$ times the number of balls, since each time frame is "skipped over" once by each ball. Another way to see this is the following. The sum of $\d f$ over a ball's orbit in an interval is the last after minus first appearence in that interval, which is $|I| \pm O(M)$.
+
 \section*{combinatorics in finite vector spaces}
-In this chapter $F$ is a finite field with $q$ elements and all vector spaces are over $F$ and finite dimensional.\\
+In this chapter $F$ is a finite field with $q$ elements and all vector spaces are over $F$ and finite dimensional.\\\\
 
 
-Result. $\abs{V}=q^{\dim V}$.\\
+Result. $\abs{V}=q^{\dim V}$.\\\\
 
 
-Result. Given a linear surjective mapping $T:V\to W$, $T$ is $\abs{\ker T}:1$.\\
+Result. Given a linear surjective mapping $T:V\to W$, $T$ is $\abs{\ker T}:1$.\\\\
 
 
-Exercise. Given a random coloring of the $30$ edges of the icosahedron red green and blue, what is the probability that each of the $20$ triangular faces have two edges of one color and one edge of another color?\\
+Exercise. Given a random coloring of the $30$ edges of the icosahedron red green and blue, what is the probability that each of the $20$ triangular faces have two edges of one color and one edge of another color?\\\\
 
 
-Result. The number of bases of $V$ is $b_d=(q^d-1)(q^d-q)\dots (q^d-q^{d-1})$, where $d=\dim V$.\\
+Result. The number of bases of $V$ is $b_d=(q^d-1)(q^d-q)\dots (q^d-q^{d-1})$, where $d=\dim V$.\\\\
 
 
 Result. The number of subspaces of $V$ of dimension $k$ is $\dfrac{(q^d-1)(q^d-q)\dots (q^d-q^{k-1})}{(q^k-1)(q^k-q)\dots (q^k-q^{k-1})}=\small{\left[\begin{array}{c}
 d\\
 k
-\end{array}\right]}_{q}$.\\
+\end{array}\right]}_{q}$.\\\\
 
 
-Result. The number of pairs $(U,W)$ with $U\oplus W=V$ and $\dim U=k$ is $\dfrac{b_d}{b_k b_{d-k}}$.\\
+Result. The number of pairs $(U,W)$ with $U\oplus W=V$ and $\dim U=k$ is $\dfrac{b_d}{b_k b_{d-k}}$.\\\\
 
 
-Result. The number of $T\in\End V$ such that $\ker T\oplus \img T =V$ and $\dim\ker T=k$ is $\dfrac{b_d}{b_k}$.\\
+Result. The number of $T\in\End V$ such that $\ker T\oplus \img T =V$ and $\dim\ker T=k$ is $\dfrac{b_d}{b_k}$.\\\\
 
 
-Result. Given $U\le V$ of dimension $r$, the number of pairs $(W_1,W_2)$ with $W_1\plus W_2=V$, $W_1\cap W_2=U$ and $\dim W_1=r+j$ is $\dfrac{b_{d-r}}{b_j, b_{d-r-j}}$.\\
+Result. Given $U\le V$ of dimension $r$, the number of pairs $(W_1,W_2)$ with $W_1\plus W_2=V$, $W_1\cap W_2=U$ and $\dim W_1=r+j$ is $\dfrac{b_{d-r}}{b_j, b_{d-r-j}}$.\\\\
 
 
 Result. The number of $T\in\End V$ such that $\dim (\ker T\cap \img T)=r$ and $\dim \img T=r+j$ is $\left[\begin{array}{c}
@@ -88,7 +108,7 @@ d-r
 \end{array}\right]_{q}\left[\begin{array}{c}
 d-r\\
 r
-\end{array}\right]_{q}\dfrac{b_{d-2r}b_{j+r}}{b_{j}b_{d-2r-j}}$.\\
+\end{array}\right]_{q}\dfrac{b_{d-2r}b_{j+r}}{b_{j}b_{d-2r-j}}$.\\\\
 
 
 Result. $q^{d^2}=\disp \sum_{r=0}^{\floor{d/2}}\sum_{j=0}^{d-2r}\left[\begin{array}{c}
@@ -97,10 +117,18 @@ d-r
 \end{array}\right]_{q}\left[\begin{array}{c}
 d-r\\
 r
-\end{array}\right]_{q}\dfrac{b_{d-2r}b_{j+r}}{b_{j}b_{d-2r-j}}$
+\end{array}\right]_{q}\dfrac{b_{d-2r}b_{j+r}}{b_{j}b_{d-2r-j}}$\\\\
+
+
+Result. The expected value of the number of nonzero fixed points of a random $g\in \GL_d(F)$ in $F^d$ is one.\\\\	%Burnside
+
+
 
 
 \section*{random abstract algebra bits}
+
+
+Exercise. Given an operator $T\in\Lin(V)$ if $v_0,Tv_0,\dots,T^{d-1}v_0$ is a basis of $V$ for some $v_0$, then $ST=TS\iff S$ is a polynomial in $T$.\\
 
 
 Observation. The following are equivalent for a finite group $G$.
