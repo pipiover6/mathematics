@@ -5,3 +5,5 @@
 [graphical irrationality of sqrt(2), triangle trisector theorem, and knots (Conway)](http://thewe.net/math/conway.pdf)
 <br>
 [mathematics of juggling](https://www.msri.org/m/people/staff/de/papers/pdfs/1994-001.pdf)
+<br>
+[q combinatorics](https://people.math.sc.edu/laszlo/Qcomb.pdf)
