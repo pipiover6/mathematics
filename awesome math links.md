@@ -7,3 +7,5 @@
 [mathematics of juggling](https://www.msri.org/m/people/staff/de/papers/pdfs/1994-001.pdf)
 <br>
 [q combinatorics](https://people.math.sc.edu/laszlo/Qcomb.pdf)
+<br>
+[spherical harmonics](https://www.cis.upenn.edu/~cis6100/sharmonics.pdf)
