@@ -52,6 +52,7 @@
 	\DeclareMathOperator\End{End}
 	\DeclareMathOperator\Lin{Lin}
 	\DeclareMathOperator\GL{GL}
+	\DeclareMathOperator\vol{vol}
 \begin{document}
 \section*{misc}
 Definition. A (mathematical) juggling pattern is a permutation $f:\Z\to\Z$ for which $\d f(t)=f(t)-t\ge 0$.\\
@@ -261,4 +262,18 @@ Theorem. $\nu_p(n!)=\floor{n/p}+\floor{n/p^2}+\floor{n/p^3}+\dots$
 Theorem. $(p-1)\nu_p(n!)=n-s_p(n)$ where $s_p(n)$ is the digit sum of $n$ in base $p$.
 \\\\
 Theorem. $\nu_p{p^k\choose r}=k-\nu_p(r)$
+\\\\
+Given $v_1,\dots,v_{n-1}\in\R^n$ linearly independent, how can one find a vector $w$ spanning $(v_1,\dots,v_{n-1})^{\perp}$?\\
+Assuming these are row vectors, put them in an $n\times n$ determinant, where the first row is $x_1,\dots,x_n$. \\
+This gives a nontrivial linear form in $x$, which vanishes for $x\in\{v_1,\dots,v_{n-1}\}$. It is of course of the form $x\mapsto x\cdot w$ for the $w$ we are looking for. To get $w$ explicitly, note that it's $i$-th coordinate is $e_i\cdot w=\det(e_i,v_1,\dots,v_{n-1})$. Moreover, the length of $w$ is precisely the $n-1$ dimensional volume of the parallelepide spanned by $v_1,\dots,v_{n-1}$. Indeed, $w\cdot w=\det(w,v_1,\dots,v_{n-1})=\vol_{n-1}(v_i)\cdot \norm{w}$, since $w$ is perpendicular to the $v_i$.
+\newpage
+\section*{problems}
+
+A two player game with $n$ lamps in a circle is played as follows. In the beginning, player 1 chooses which lamps should be on and which should be off. After that, in each turn, player 2 specifies which lamps should be switched (on$\leftrightarrow$off), but player 1 may rotate the cicle of lamps as they please before making the switches. Player 2 wins once all lamps are off. Find for which $n$ player 2 can win, and how.
+\\\\%for powers of 2, R = rotation, then I+R is nilpotent, and so after n turns of specifying the current board player 2 will win
+
+A two player game with a standard deck of cards is played as follows. In the beginning, player 1 randomly shuffles the deck. Then, at any point, player 2 can either bet that the next card will be red, or choose to see the next card. The game ends once the bet is made, and player 2 wins if they guessed right. (Player 2 must make a bet at some point, so if 51 cards were seen the last card has to be betted on). Show that no matter what strategy player 2 picks, they will win an expected $1/2$ of the games they play.
+
+
+
 \end{document}
