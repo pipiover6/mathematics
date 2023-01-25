@@ -9,3 +9,5 @@
 [q combinatorics](https://people.math.sc.edu/laszlo/Qcomb.pdf)
 <br>
 [spherical harmonics](https://www.cis.upenn.edu/~cis6100/sharmonics.pdf)
+<br>
+[Chassels Cayley Bacharach](https://www.ams.org/journals/bull/1996-33-03/S0273-0979-96-00666-0/S0273-0979-96-00666-0.pdf)
