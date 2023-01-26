@@ -20,3 +20,4 @@
 <br>
 [גאומטריה דיפרנציאלית](https://digmi.org/lecture_notes/Differential_Geometry.pdf)
 <br>
+[משוואות דיפרנציאליות במשתנה אחד](https://digmi.org/lecture_notes/Ordinary_Differential_Equations.pdf)
