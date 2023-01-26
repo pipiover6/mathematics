@@ -1,3 +1,4 @@
+**brief notes**
 [combinatorics on finite fields](https://people.math.harvard.edu/~landesman/assets/counting-points-over-finite-fields.pdf)
 <br>
 [generalized Frobenius formulas for character power sums](https://arxiv.org/pdf/1603.06190.pdf)
@@ -11,3 +12,10 @@
 [spherical harmonics](https://www.cis.upenn.edu/~cis6100/sharmonics.pdf)
 <br>
 [Chassels Cayley Bacharach](https://www.ams.org/journals/bull/1996-33-03/S0273-0979-96-00666-0/S0273-0979-96-00666-0.pdf)
+<br>
+<br>
+<br>
+**course notes**
+<br>
+[גאומטריה דיפרנציאלית](https://digmi.org/lecture_notes/Differential_Geometry.pdf)
+<br>
