@@ -22,5 +22,5 @@
 <br>
 [משוואות דיפרנציאליות במשתנה אחד](https://digmi.org/lecture_notes/Ordinary_Differential_Equations.pdf)
 <br>
-[מכניקה ויחסות](https://notes.sharir.org/class_notes/2009-2010/mechanics.pdf)
+[מכניקה ויחסות פרטית](https://notes.sharir.org/class_notes/2009-2010/mechanics.pdf)
 
