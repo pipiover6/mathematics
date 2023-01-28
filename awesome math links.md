@@ -19,6 +19,8 @@
 
 
 <br><br><br>**course notes**<br>
+[vector fields and differential forms](https://www.ams.org/open-math-notes/files/course-material/OMN-202209-111340-1-Course_notes-v1.pdf)
+<br>
 [גאומטריה דיפרנציאלית](https://digmi.org/lecture_notes/Differential_Geometry.pdf)
 <br>
 [משוואות דיפרנציאליות במשתנה אחד](https://digmi.org/lecture_notes/Ordinary_Differential_Equations.pdf)
