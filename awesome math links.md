@@ -18,7 +18,7 @@
 <br>
 **long notes/books**
 <br>
-[a singular mathematical promenade](https://arxiv.org/ftp/arxiv/papers/1612/1612.06373.pdf) ★
+[a singular mathematical promenade (through analysis, combinatorics and topology)](https://arxiv.org/ftp/arxiv/papers/1612/1612.06373.pdf) ★
 <br>
 <br>
 <br>
