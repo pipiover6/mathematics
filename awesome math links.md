@@ -13,7 +13,7 @@
 <br>
 [Chassels Cayley Bacharach](https://www.ams.org/journals/bull/1996-33-03/S0273-0979-96-00666-0/S0273-0979-96-00666-0.pdf)
 <br>
-[counting permutations (Gessel)](https://people.brandeis.edu/~gessel/homepage/slides/alt-perm-slides.pdf)
+[counting permutations (Gessel)](https://people.brandeis.edu/~gessel/homepage/slides/balls-into-boxes.pdf)
 
 <br><br><br>**long notes/books**<br>
 [a singular mathematical promenade (through analysis, combinatorics and topology)](https://arxiv.org/ftp/arxiv/papers/1612/1612.06373.pdf) ★
