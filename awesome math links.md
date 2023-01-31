@@ -17,7 +17,7 @@
 <br>
 [counting walks (Gessel)](https://people.brandeis.edu/~gessel/homepage/slides/chung-feller-slides.pdf)
 <br>
-[Enumerative Algebraic Geometry of Conics](https://www.maa.org/sites/default/files/images/upload_library/22/Ford/Bashelor.pdf)
+[enumerative algebraic geometry of conics](https://www.maa.org/sites/default/files/images/upload_library/22/Ford/Bashelor.pdf)
 
 <br><br><br>**long notes/books**<br>
 [a singular mathematical promenade (through analysis, combinatorics and topology)](https://arxiv.org/ftp/arxiv/papers/1612/1612.06373.pdf) ★
