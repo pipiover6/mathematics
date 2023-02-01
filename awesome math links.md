@@ -25,7 +25,9 @@
 [a singular mathematical promenade (through analysis, combinatorics and topology)](https://arxiv.org/ftp/arxiv/papers/1612/1612.06373.pdf) ★
 
 
-<br><br><br>**course notes**<br>
+<br><br><br>**medium/course notes**<br>
+[de Rham cohomology](https://niemiro.dev/drc.pdf)
+<br>
 [vector fields and differential forms](https://www.ams.org/open-math-notes/files/course-material/OMN-202209-111340-1-Course_notes-v1.pdf)
 <br>
 [גאומטריה דיפרנציאלית](https://digmi.org/lecture_notes/Differential_Geometry.pdf)
