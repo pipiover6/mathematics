@@ -18,6 +18,8 @@
 [counting walks (Gessel)](https://people.brandeis.edu/~gessel/homepage/slides/chung-feller-slides.pdf)
 <br>
 [enumerative algebraic geometry of conics](https://www.maa.org/sites/default/files/images/upload_library/22/Ford/Bashelor.pdf)
+<br>
+[another proof of $\sum 1/n=\infty$](https://doi.org/10.1080/00029890.2018.1408375)
 
 <br><br><br>**long notes/books**<br>
 [a singular mathematical promenade (through analysis, combinatorics and topology)](https://arxiv.org/ftp/arxiv/papers/1612/1612.06373.pdf) ★
