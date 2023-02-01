@@ -35,7 +35,8 @@
 [משוואות דיפרנציאליות במשתנה אחד](https://digmi.org/lecture_notes/Ordinary_Differential_Equations.pdf)
 <br>
 [מכניקה ויחסות פרטית](https://notes.sharir.org/class_notes/2009-2010/mechanics.pdf)
-
+<br>
+[complex algebraic geometry](https://faculty.math.illinois.edu/~palbin/Math514.Fall2020/Lectures.html)
 
 <br><br><br>**misc**<br>
 [ams open math notes](https://www.ams.org/open-math-notes)
