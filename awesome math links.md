@@ -37,7 +37,8 @@
 [מכניקה ויחסות פרטית](https://notes.sharir.org/class_notes/2009-2010/mechanics.pdf)
 <br>
 [complex algebraic geometry](https://faculty.math.illinois.edu/~palbin/Math514.Fall2020/Lectures.html)
-
+<br>
+[Israel training for students olympiad](https://www.researchgate.net/profile/A-Belov-Kanel/publication/309397257_Matherials_for_training_of_Israel_Team_for_International_Math_competition_for_university_students/links/580e2d4f08ae7525273d0987/Matherials-for-training-of-Israel-Team-for-International-Math-competition-for-university-students.pdf)
 <br><br><br>**misc**<br>
 [ams open math notes](https://www.ams.org/open-math-notes)
 
