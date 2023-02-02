@@ -7,8 +7,9 @@ And so, I shall try to motivate the reader to do the actual work - discovery, an
 
 ### The nature of exploration
 
+Exploring naively and even for a long time is the job of a mathematician - it's what develops intuition and deep understanding.
 Exploring with advanced tools is not as much fun, nor is it natural to start with. Moreover, it is the explorer's job to first discover these tools.
-Exploring naively and even for a long time is part of the job - it's what develops intuition and deep understanding. 
+Moreover, it is always more enlightning to read how the greats started a branch of mathematics than it is to read the hindsight of the modern version which makes so many difficult steps appear natural.
 
 <br>
 
