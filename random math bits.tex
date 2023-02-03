@@ -53,6 +53,7 @@
 	\DeclareMathOperator\Lin{Lin}
 	\DeclareMathOperator\GL{GL}
 	\DeclareMathOperator\vol{vol}
+	\DeclareMathOperator\trace{trace}
 \begin{document}
 \section*{misc}
 Definition. A (mathematical) juggling pattern is a permutation $f:\Z\to\Z$ for which $\d f(t)=f(t)-t\ge 0$.\\
@@ -267,12 +268,47 @@ Given $v_1,\dots,v_{n-1}\in\R^n$ linearly independent, how can one find a vector
 Assuming these are row vectors, put them in an $n\times n$ determinant, where the first row is $x_1,\dots,x_n$. \\
 This gives a nontrivial linear form in $x$, which vanishes for $x\in\{v_1,\dots,v_{n-1}\}$. It is of course of the form $x\mapsto x\cdot w$ for the $w$ we are looking for. To get $w$ explicitly, note that it's $i$-th coordinate is $e_i\cdot w=\det(e_i,v_1,\dots,v_{n-1})$. Moreover, the length of $w$ is precisely the $n-1$ dimensional volume of the parallelepide spanned by $v_1,\dots,v_{n-1}$. Indeed, $w\cdot w=\det(w,v_1,\dots,v_{n-1})=\vol_{n-1}(v_i)\cdot \norm{w}$, since $w$ is perpendicular to the $v_i$.
 \newpage
+\section*{Representations of groups}
+We start by understanding commutative algebras of matrices. This work is due to Dedekind, Frobenius, Molien, Cartan, Weierstrass.\\\\
+The main point is that if $A_1,\dots,A_r\in\C^{d\times d}$ commute then they have a simultaneous triangulaztion. \\
+In particular, Dedekind noticed that we have the following factorization to linear terms $$\det(x_1A_1+\dots+x_rA_r)=(\lambda_1^1x_1 +\dots+ \lambda_r^1x_r)\dots (\lambda_1^dx_1 +\dots+ \lambda_r^dx_r)$$ where $\lambda_{j}^1,\dots,\lambda_{j}^d$ are the eigenvalues of $A_j$. More generally, Frobenius noticed that the eigenvalues of $f(A_1,\dots,A_r)$ are $$f(\lambda_1^1,\dots,\lambda_r^1),\dots,f(\lambda_1^d,\dots,\lambda_r^d)$$ for all polynomials $f$ (or even rational functions, as long everything divided by is invertible).
+\\\\%this is a corollary of simultaneous triangulization 
+
+Now let $E$ be a commutative and associative algebra with a fixed basis $e_1,\dots,e_d$ over $\C$. Write $$e_je_k=\sum_i \eta_{ijk}e_i$$
+Let $A_i\in\C^{d\times d}$ be the matrix of multiplication (left or right) by $e_i$ wrt this basis. Then $$A_jA_k=\sum_i\eta_{ijk}A_i$$ 
+This is the (Cayley) regular representation of $E$ into $\End(E)$. Because the $A_i$ commute, they are simultaneously triangulable, so in a triangulazing basis we have $$A_i=\left[\begin{array}{ccc}
+\lambda_{i}^{1} & * & *\\
+ & \ddots & *\\
+ &  & \lambda_{i}^{d}
+\end{array}\right]$$
+so that $$\lambda_{j}^s\lambda_k^s=\sum_i \eta_{ijk}\lambda_i^s$$
+Let's see what happens if $\det(\lambda_j^s)=0$. In that case, there's a nonzero vector $x_1,\dots,x_d$ such that $\lambda_1^sx_1+\dots+\lambda_d^sx_d=0$, namely $x_1A_1+\dots+x_dA_d$ is strictly upper triangular wrt the triangulizing basis. In particular, it is nilpotent, so $x_1e_1+\dots+x_de_d$ is nilpotent, and by commutativity so is any product of it. In particular, it is degenerate in the symmetric bilinear form $(u,v)\mapsto \trace(m_{uv})$. In other words, if this (Killing) form is nondegenerate, then there are no nonzero nilpotents in $E$, which means $\det(\lambda_j^s)\neq 0$. We shall now assume the Killing form is non-degenerate. Since $\det(\lambda_j^s)\neq 0$, we can find linear combinations of the $A_i$ with $\alpha_{1}A_{1}+\dots+\alpha_{s}A_{s}=\left[\begin{array}{ccc}
+1 & * & *\\
+ & \ddots & *\\
+ &  & 0
+\end{array}\right]$, ..., $\zeta_{1}A_{1}+\dots+\zeta_{s}A_{s}=\left[\begin{array}{ccc}
+0 & * & *\\
+ & \ddots & *\\
+ &  & 1
+\end{array}\right]$. Therefore $\alpha=\sum \alpha_i e_i,\dots,\zeta=\sum \zeta_i e_i$ satisfy that $\alpha^2-\alpha,\dots,\zeta^2-\zeta$ are nilpotent. So $\alpha^2=\alpha,\dots,\zeta^2=\zeta$ are idempotents!!! Moreover, they are clearly a basis of $E$. Moreover, $\alpha\beta,\dots,\alpha\zeta,\dots$ are nilpotents, so zero. So in fact, as an algebra, $E$ is isomorphic to a product of $\C$ with itself $s$ times!!!!!
+\\\\
+
+%To see the Killing form is nondegenerate in the case $E=Z(\CG)$, see https://math.stackexchange.com/questions/4631341/reference-for-an-english-translation-of-a-proof-of-frobenius-on-the-origins-of-r
+
+
+\newpage
 \section*{problems}
 
 A two player game with $n$ lamps in a circle is played as follows. In the beginning, player 1 chooses which lamps should be on and which should be off. After that, in each turn, player 2 specifies which lamps should be switched (on$\leftrightarrow$off), but player 1 may rotate the cicle of lamps as they please before making the switches. Player 2 wins once all lamps are off. Find for which $n$ player 2 can win, and how.
 \\\\%for powers of 2, R = rotation, then I+R is nilpotent, and so after n turns of specifying the current board player 2 will win
 
 A two player game with a standard deck of cards is played as follows. In the beginning, player 1 randomly shuffles the deck. Then, at any point, player 2 can either bet that the next card will be red, or choose to see the next card. The game ends once the bet is made, and player 2 wins if they guessed right. (Player 2 must make a bet at some point, so if 51 cards were seen the last card has to be betted on). Show that no matter what strategy player 2 picks, they will win an expected $1/2$ of the games they play.
+\\\\%two proofs, both think of strategies as binary trees - the first by induction on the number of cards (red and black) and is a simple computation. the second by induction from the leaves: if a parent has both children as leaves they can be merged to the parent. the longest paths are of that form, so the strategy is eventually just picking the first card.
+
+The number of permutations of $[2m]$ all of whose cycles are even (equivalently, odd) is $((2m-1)!!)^2$.
+\\\\%this hints towards pfaffians
+
+$\#\{(g_1,g_2):g_1g_2=g_2g_1\}=|G|\cdot k$ where $k=$ num conj classes.
 
 
 
