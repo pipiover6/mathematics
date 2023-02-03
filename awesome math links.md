@@ -44,5 +44,5 @@
 <br><br><br>**misc**<br>
 [ams open math notes](https://www.ams.org/open-math-notes)
 <br>
-[chiasme - cool math blog](https://chiasme.wordpress.com/?s=probability)
+[chiasme - math blog](https://chiasme.wordpress.com/?s=probability)
 
