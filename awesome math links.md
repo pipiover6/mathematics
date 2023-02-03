@@ -26,9 +26,11 @@
 
 
 <br><br><br>**medium/course notes**<br>
+[vector fields and differential forms](https://www.ams.org/open-math-notes/omn-view-listing?listingId=111340)
+<br>
 [de Rham cohomology](https://niemiro.dev/drc.pdf)
 <br>
-[vector fields and differential forms](https://www.ams.org/open-math-notes/omn-view-listing?listingId=111340)
+[characteristic classes](https://github.com/sreahw/characteristic-classes/blob/master/characteristic-classes.pdf)
 <br>
 [גאומטריה דיפרנציאלית](https://digmi.org/lecture_notes/Differential_Geometry.pdf)
 <br>
