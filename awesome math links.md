@@ -28,6 +28,8 @@
 
 
 <br><br><br>**medium/course notes**<br>
+[אנליזה פי-אדית](https://elad.zelingher.com/course_notes/p-adic-numbers-analysis-and-zeta-functions.pdf)
+<br>
 [vector fields and differential forms](https://www.ams.org/open-math-notes/omn-view-listing?listingId=111340)
 <br>
 [de Rham cohomology](https://niemiro.dev/drc.pdf)
