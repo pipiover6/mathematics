@@ -53,3 +53,9 @@
 <br>
 [chiasme - math blog](https://chiasme.wordpress.com/?s=probability)
 
+<br><br><br>**recommendations**<br>
+The following fantastic books are not freely available. <br>
+An introduction to manifolds - Tu <br>
+Visual Differential Geometry and Forms - Needham <br>
+
+
